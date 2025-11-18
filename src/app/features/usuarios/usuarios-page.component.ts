@@ -75,9 +75,9 @@ const PAGE_SIZE = 10;
                       <td>{{ u.telefono || '—' }}</td>
                       <td>{{ u.rolNombre || '—' }}</td>
                       <td class="text-end">
-                        <button type="button" class="btn btn-sm btn-outline-primary" title="Operadores" aria-label="Gestionar operadores" (click)="abrirSubusuarios(u)" [hidden]="!(canManageSubusers() && (u.idRol === 2))">
+                        <!-- <button type="button" class="btn btn-sm btn-outline-primary" title="Operadores" aria-label="Gestionar operadores" (click)="abrirSubusuarios(u)" [hidden]="!(canManageSubusers() && (u.idRol === 2))">
                           <i class="bi bi-people"></i>
-                        </button>
+                        </button> -->
                         <button type="button" class="btn btn-sm btn-outline-secondary me-1" (click)="abrirEditar(u)" title="Editar" aria-label="Editar usuario" [hidden]="!canManageUsers()">
                           <i class="bi bi-pencil"></i>
                         </button>
@@ -182,9 +182,11 @@ export class UsuariosPageComponent {
     import('rxjs').then(({ forkJoin }) => {
       forkJoin({ users: this.service.listarUsuarios({ rol: true }), roles: this.service.obtenerRoles() }).subscribe({
         next: ({ users, roles }) => {
-          this.roles.set(roles ?? []);
-          const idToName = new Map((roles ?? []).map(r => [String(r.id), r.nombre]));
-          const nameToId = new Map((roles ?? []).map(r => [String(r.nombre).toLowerCase(), r.id]));
+          const rolesRaw = roles ?? [];
+          const rolesSinExcluido = rolesRaw.filter(r => Number(r.id) !== 3);
+          this.roles.set(rolesSinExcluido);
+          const idToName = new Map(rolesRaw.map(r => [String(r.id), r.nombre]));
+          const nameToId = new Map(rolesRaw.map(r => [String(r.nombre).toLowerCase(), r.id]));
           const unificados = (users ?? []).map(u => {
             // Si falta el idRol pero tenemos el nombre, lo inferimos
             const inferredIdRol = u.idRol ?? (u.rolNombre ? nameToId.get(String(u.rolNombre).toLowerCase()) : undefined);
@@ -195,7 +197,11 @@ export class UsuariosPageComponent {
               rolNombre: resolvedNombre,
             };
           });
-          this.usuarios.set(unificados);
+          const visibles = unificados.filter(u => {
+            const uRol = u.idRol ?? (u.rolNombre ? nameToId.get(String(u.rolNombre).toLowerCase()) : undefined);
+            return Number(uRol ?? 0) !== 3;
+          });
+          this.usuarios.set(visibles);
           this.loading.set(false);
           this.refreshing.set(false);
         },
