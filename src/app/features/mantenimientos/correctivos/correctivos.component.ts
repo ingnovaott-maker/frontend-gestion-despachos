@@ -472,11 +472,7 @@ export class CorrectivosComponent {
   private getRegistrosMock() {
     const hoy = Date.now();
     const d = (dias: number) => new Date(hoy - dias * 24 * 60 * 60 * 1000).toISOString();
-    return [
-      { placa: 'MNO321', fecha: d(1), estadoMantenimiento: 'Vigente' },
-      { placa: 'PQR654', fecha: d(7), estadoMantenimiento: 'Pendiente' },
-      { placa: 'STU987', fecha: d(21), estadoMantenimiento: 'Programado' },
-    ];
+    return [];
   }
 
   registrosFiltrados() {
@@ -529,10 +525,7 @@ export class CorrectivosComponent {
 
   // Mocks
   private getDocumentosMock(): DocumentoItem[] {
-    return [
-      { documento: 'demo-c-1.pdf', ruta: 'mock', nombreOriginal: 'Manual correctivo demo.pdf' },
-      { documento: 'demo-c-2.pdf', ruta: 'mock', nombreOriginal: 'Checklist correctivo demo.pdf' },
-    ];
+    return [];
   }
   isMockDoc(d: DocumentoItem): boolean { return d.ruta === 'mock'; }
 

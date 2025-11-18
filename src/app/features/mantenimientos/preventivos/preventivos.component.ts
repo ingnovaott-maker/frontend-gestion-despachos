@@ -387,11 +387,7 @@ export class PreventivosComponent {
   private getRegistrosMock() {
     const hoy = Date.now();
     const d = (dias: number) => new Date(hoy - dias * 24 * 60 * 60 * 1000).toISOString();
-    return [
-      { placa: 'ABC123', fecha: d(2), estadoMantenimiento: 'Vigente' },
-      { placa: 'XYZ789', fecha: d(10), estadoMantenimiento: 'Pendiente' },
-      { placa: 'JKL456', fecha: d(30), estadoMantenimiento: 'Vencido' },
-    ];
+    return [];
   }
 
   onFileChange(evt: Event) {
@@ -536,10 +532,7 @@ export class PreventivosComponent {
 
   // Mocks
   private getDocumentosMock(): DocumentoItem[] {
-    return [
-      { documento: 'demo-1.pdf', ruta: 'mock', nombreOriginal: 'Manual preventivo demo.pdf' },
-      { documento: 'demo-2.pdf', ruta: 'mock', nombreOriginal: 'Checklist preventivo demo.pdf' },
-    ];
+    return [];
   }
   isMockDoc(d: DocumentoItem): boolean { return d.ruta === 'mock'; }
 

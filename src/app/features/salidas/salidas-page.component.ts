@@ -19,7 +19,7 @@ import { Salida } from './salidas.models';
   selector: 'app-salidas-page',
   template: `
     <div class="container-fluid py-3">
-      <app-page-header [title]="'Salidas'" [subtitle]="'Gestión de salidas.'" [usuarioInput]="usuario()" />
+      <app-page-header [title]="'Novedades'" [subtitle]="'Gestión de novedades.'" [usuarioInput]="usuario()" />
 
       <section class="card border-1 shadow-sm">
         <div class="card-body d-grid gap-3">

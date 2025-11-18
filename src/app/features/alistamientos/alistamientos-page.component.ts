@@ -24,7 +24,7 @@ const DOCUMENTOS_PAGE_SIZE = 5;
 const HISTORIAL_PAGE_SIZE = 5;
 const MAX_FILE_SIZE_BYTES = 4 * 1024 * 1024;
 const ALLOWED_MIME_TYPES = ['application/pdf'];
-const DEMO_ENABLED = !environment.production;
+const DEMO_ENABLED = false;
 
 interface FormContext extends AlistamientoFormContext {
   mantenimientoId?: string | number;
