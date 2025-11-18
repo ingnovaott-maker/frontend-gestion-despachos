@@ -97,7 +97,6 @@ const PAGE_SIZE = 10;
               [pageSize]="pageSize()"
               (pageSizeChange)="onPageSize($event)"
               [storageKey]="'usuarios_list'"
-              [maxButtons]="7"
             ></app-paginator>
           }
         </div>
