@@ -1,0 +1,32 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap";
+
+/* src/styles.css */
+:root {
+  --brand-500: #1a6bb8;
+  --brand-600: #155ea3;
+  --brand-700: #104d86;
+  --brand-800: #0c3f6e;
+  --brand-900: #083152;
+  --page-bg: #f6f8fb;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  color: #0f172a;
+  background: var(--page-bg);
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles.css.map */

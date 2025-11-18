@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.css"],
+  "sourcesContent": ["@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');\r\n\r\n:root {\r\n\t--brand-500: #1a6bb8;\r\n\t--brand-600: #155ea3;\r\n\t--brand-700: #104d86;\r\n\t--brand-800: #0c3f6e;\r\n\t--brand-900: #083152;\r\n\t--page-bg: #f6f8fb;\r\n}\r\n\r\nhtml, body {\r\n\tpadding: 0;\r\n\tmargin: 0;\r\n}\r\n\r\nbody {\r\n\tfont-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;\r\n\tcolor: #0f172a;\r\n\tbackground: var(--page-bg);\r\n}\r\n/* You can add global styles to this file, and also import other style files */\r\n"],
+  "mappings": ";;;AAEA;AACC,eAAa;AACb,eAAa;AACb,eAAa;AACb,eAAa;AACb,eAAa;AACb,aAAW;AACZ;AAEA;AAAM;AACL,WAAS;AACT,UAAQ;AACT;AAEA;AACC;AAAA,IAAa,OAAO;AAAA,IAAE,aAAa;AAAA,IAAE,kBAAkB;AAAA,IAAE,UAAU;AAAA,IAAE,MAAM;AAAA,IAAE,SAAS;AAAA,IAAE,KAAK;AAAA,IAAE;AAC/F,SAAO;AACP,cAAY,IAAI;AACjB;",
+  "names": []
+}
