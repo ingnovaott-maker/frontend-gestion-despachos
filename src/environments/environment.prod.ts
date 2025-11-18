@@ -17,4 +17,6 @@ export const environment = {
 
   urlSinst: 'https://sinstbackend.azurewebsites.net',
   urlApiIntegradoraV2: 'https://pruebasterminales.supertransporte.gov.co/api-procesos',
+
+  tokenParametricas: '01958b08-c5b4-7799-930e-428f2a3f8e72'
 };
