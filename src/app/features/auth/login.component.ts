@@ -12,8 +12,8 @@ import { AutenticacionService } from '../../core/autenticacion.service';
         <div class="brand-bar" aria-hidden="true">
           <img
             ngSrc="assets/logo-login.png"
-            width="220"
-            height="55"
+            width="320"
+            height="100"
             alt="Gesmovil"
             priority
             class="login-logo"
