@@ -41,3 +41,31 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Lint / tooling caches
+.eslintcache
+
+# Package manager caches
+.npm/
+.pnpm-store/
+.yarn/
+.yarnrc
+.yarnrc.yml
+
+# Local environment files (no versionar secretos)
+*.env
+*.env.*
+.env.*
+.env.local
+/src/environments/environment.local.ts
+
+# E2E / testing artifacts (si se usan)
+test-results/
+.playwright/
+.cypress/
+
+# Husky internal shim (si llega a generarse)
+/.husky/_/
