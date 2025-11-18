@@ -3,7 +3,7 @@ export const environment = {
   //urlAlcoholimetria:'https://pruebasterminales.supertransporte.gov.co/api-procesos',
   urlAlcoholimetria:'http://127.0.0.1:5050',
   urlBackendDespachos: 'https://msdespachosback.thankfulbeach-21114078.eastus.azurecontainerapps.io',
-  urlBackend: 'http://localhost:5050' /* 'https://rutasbackend.azurewebsites.net' */,
+  urlBackend: 'http://187.33.144.75:5050' /* 'https://rutasbackend.azurewebsites.net' */,
   /* urlParametricas: 'https://msparametricasqa.thankfulbeach-21114078.eastus.azurecontainerapps.io', */
   urlParametricas: 'https://parametricasback.azurewebsites.net',
   urlBackendVigia: 'http://172.16.3.104:3334',
