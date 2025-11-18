@@ -31,7 +31,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": ".htaccess",
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
